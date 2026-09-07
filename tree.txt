@@ -1,0 +1,149 @@
+a tree is a non linear data structure with herichical realtionship between
+its element without haveing any cycle it is basically reverse 
+from real life tree.
+
+#advantage 
+    -quicker and easier to data
+    -store herarchical data llike folder structure organization structure,XML/HTML data
+   
+    Root : top node without parent
+    Edge : a link between parent and child
+    Leaf : a node which does not have children
+    Sibling : children of same parent
+    Ancestor : parent, grandparent and great grandparent of a node
+    Depth of node : a length of the path from root to node
+    Height of node : a length of the path from the node to the deepest node
+    Depth of tree : depth of root node
+    Height of tree : height of root node    
+
+**Height of tree = 3**
+
+#there are many different types of data
+    -binary tress are the data structure in which each node has at most two children 
+    often refered to as the left and right children
+    -binary tree are a perequsitie for mode advanced tree like BST, AVL, red black trees
+    -human coding problem heap priority problem and expression parsing problem can be 
+    solved effiv=cient using brinary tree
+    ==two ways to write binary tree
+        =linked list
+        =python list(array)
+
+                         +-----+-------+-----+
+                         | 222 | 111   | 333 |
+                         +-----+-------+-----+
+                            /                 \
+                           /                   \
+                          /                     \
+             +-----+-------+-----+       +-----+-------+-----+
+             | 444 |  222  | 555 |       | 666 |  333  | 777 |
+             +-----+-------+-----+       +-----+-------+-----+
+                /       \                     /       \
+               /         \                   /         \
+              /           \                 /           \
+     +-----+-------+-----+   +-----+-------+-----+   +-----+-------+-----+   +-----+-------+-----+
+     | ??? |  444  | ??? |   | ??? |  555  | ??? |   | ??? |  666  | ??? |   | ??? |  777  | ??? |
+     +-----+-------+-----+   +-----+-------+-----+   +-----+-------+-----+   +-----+-------+-----+
+
+
+     PYTHON LIST - TREE REPRESENTATION
+
+                         +---------+
+                         |  Drinks |
+                         +---------+
+                         /         \
+                        /           \
+               +-------+             +-------+
+               |  Hot  |             |  Cold |
+               +-------+             +-------+
+                /     \               /     \
+               /       \             /       \
+        +-------+   +--------+   +----------+   +----------+
+        |  Tea  |   | Coffee |   | Ice cream|   | Pastries |
+        +-------+   +--------+   +----------+   +----------+
+
+PYTHON LIST - ARRAY REPRESENTATION
+
+    Index:
+    0      1     2       3      4          5       6           7           8 
+    +——---+——---+——----+——---+——------+———-------+———-------+———-+——-+------|
+    Drinks| Hot | Cold | Tea | Coffee | Ice cream| Pastries |        |
+    +——----+——--+——-+——-+——-+———+———-+———-+——-+
+
+    For a node at index x:
+
+    Left child = 2x Right child = 2x + 1
+
+    Example: If x = 3
+
+    Left child = 2 x 3 = 6 Right child = 2 x 3 + 1 = 7
+
+#brinary search tree
+    -in the left subtree the value of a node is less than or equal to its parent value
+    -in the right subtree the value of a node is greater than its parent node value
+            70
+           /  \
+         50    90
+        /  \  /  \
+      30   60 80  100
+     /  \
+   20    40
+
+   -it performs faster than binary tree when insersting and deleting nodes
+
+  Example                          Tree structure:
+
+              N1
+             /  \
+           N2    N3             root
+          /  \  /  \              |
+        N4   N5 N6  N7          left
+       /  \                       |
+     N9    N10                  right
+
+Traversal order shown in the diagram:
+N1 -> N2 -> N4 -> N9 -> N10 -> N5 -> N3 -> N6 -> N7
+
+
+#POSTORDER TRAVERSAL Example
+====================
+
+    Rule:
+    Left Subtree -> Right Subtree -> Root Node
+
+    Binary Tree Structure:
+
+                N1
+                /  \
+             N2    N3
+            /  \  /  \
+         N4   N5 N6   N7
+        /  \
+       N9    N10
+
+       Postorder Traversal Order:
+N9 -> N10 -> N4 -> N5 -> N2 -> N6 -> N7 -> N3 -> N1
+
+-LEVEL ORDER TRAVERSAL
+======================
+
+    Rule:
+    Visit nodes level by level, from left to right.
+
+    Tree structure:
+
+                 N1
+                /  \
+             N2    N3
+            /  \  /  \
+         N4   N5 N6   N7
+        /  \
+      N9    N10
+
+    Levels:
+    Level 1: N1
+    Level 2: N2, N3
+    Level 3: N4, N5, N6, N7
+    Level 4: N9, N10
+
+    Level Order Traversal:
+    N1 -> N2 -> N3 -> N4 -> N5 -> N6 -> N7 -> N9 -> N10

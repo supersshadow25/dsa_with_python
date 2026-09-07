@@ -1,0 +1,4 @@
+is a form of a sequence collection and it does not have to be in a order.
+a linked list is made up of independent nodes that may contain any type of data
+and each node has a reference to the next node in the linked.
+
