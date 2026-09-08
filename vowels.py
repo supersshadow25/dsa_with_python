@@ -10,4 +10,4 @@ for i in name:
         consonent_count +=1
 print( vowels_count)
 print(consonent_count)
-        
+    
