@@ -47,6 +47,13 @@ def postOrderTraversal(rootNode):
     postOrderTraversal(rootNode.leftchild)
     postOrderTraversal(rootNode.rightchild)
     print(rootNode.data)
+    
+def deleteBST(rootNode):
+    rootNode.data = None
+    rootNode.leftchild = None
+    rootNode.rightchild = None
+    return "The BST has been successfully Deleted"
+    print(rootNode.data)
 
 
 newBST = BSTree(None)
