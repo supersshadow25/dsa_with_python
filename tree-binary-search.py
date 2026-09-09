@@ -6,18 +6,13 @@ class BSTree:
 
 
 def insertNode(rootNode, nodeValue):
-<<<<<<< HEAD
     if rootNode.data is None:
-=======
-    if rootNode.data == None:
->>>>>>> a57d9d2675b240037d59e7f812c0c02a9d4bf086
         rootNode.data = nodeValue
 
     elif nodeValue <= rootNode.data:
         if rootNode.leftchild is None:
             rootNode.leftchild = BSTree(nodeValue)
         else:
-<<<<<<< HEAD
             insertNode(rootNode.leftchild, nodeValue)
 
     else:
@@ -25,27 +20,17 @@ def insertNode(rootNode, nodeValue):
             rootNode.rightchild = BSTree(nodeValue)
         else:
             insertNode(rootNode.rightchild, nodeValue)
-=======
-            if rootNode.rightchild is None:
-                rootNode.rightchild = BSTree(nodeValue)
-            else:
-                insertNode(rootNode.rightchild, nodeValue)
->>>>>>> a57d9d2675b240037d59e7f812c0c02a9d4bf086
 
 
 def preOrderTraversal(rootNode):
     if not rootNode:
         return
-<<<<<<< HEAD
 
-=======
->>>>>>> a57d9d2675b240037d59e7f812c0c02a9d4bf086
     print(rootNode.data)
     preOrderTraversal(rootNode.leftchild)
     preOrderTraversal(rootNode.rightchild)
 
 
-<<<<<<< HEAD
 def inOrderTraversal(rootNode):
     if not rootNode:
         return
@@ -62,20 +47,33 @@ def postOrderTraversal(rootNode):
     postOrderTraversal(rootNode.leftchild)
     postOrderTraversal(rootNode.rightchild)
     print(rootNode.data)
-    
+
+
 def deleteBST(rootNode):
     rootNode.data = None
     rootNode.leftchild = None
     rootNode.rightchild = None
-    return "The BST has been successfully Deleted"
-    print(rootNode.data)
+    print("The BST has been successfully Deleted")
+
+
+def searchNode(rootNode, nodeValue):
+    if rootNode is None:
+        print("The value is not found")
+        return
+
+    if rootNode.data == nodeValue:
+        print("The value is found")
+        return
+
+    elif nodeValue < rootNode.data:
+        searchNode(rootNode.leftchild, nodeValue)
+
+    else:
+        searchNode(rootNode.rightchild, nodeValue)
 
 
 newBST = BSTree(None)
 
-=======
-newBST = BSTree(None)
->>>>>>> a57d9d2675b240037d59e7f812c0c02a9d4bf086
 insertNode(newBST, 70)
 insertNode(newBST, 50)
 insertNode(newBST, 90)
@@ -84,8 +82,6 @@ insertNode(newBST, 60)
 insertNode(newBST, 20)
 insertNode(newBST, 40)
 
-<<<<<<< HEAD
 preOrderTraversal(newBST)
-=======
-preOrderTraversal(newBST)
->>>>>>> a57d9d2675b240037d59e7f812c0c02a9d4bf086
+
+searchNode(newBST, 200)
