@@ -1,0 +1,48 @@
+-graph consists of a finite set of verticles(or nodes) and a set of edges which connect a pair of nodes
+-                       graph
+                        /    \
+                    directed                undirected
+                    /       \                   
+                weighted    unweighted
+                /       \
+            positive    negative
+
+    unweighted - undirected
+    unweighted - directed
+    positive weighted - undirected
+    positive weighted - directed
+    negative weighted - undirected
+    negative weighted - directed
+
+-Adjecent matrix is a square matrix or you can say it is a 2D array and the elemnts of the matrix indicatre whether pairs of verticle
+are adjecnt or not in the graph
+        A -------- B
+        | \        |
+        |  \       |
+        C -------- D
+                    \ 
+                     E
+
+-An adjacency list is a collection of unordered list used to represent a
+graph. Each list describes the set of neighbors of a vertex in the
+graph.
+
+             B              
+            / \                                we can use python dictionary for adjacency list.
+           /   \
+          A     E
+         / \   /
+        /   \ /
+       C-----D
+
+                                A : B -> C -> D
+                                B : A -> E
+                                C : A -> D
+                                D : A -> C -> E
+                                E : B -> D
+
+
+-if graph is complete or almost complete we should use adjacency matrix
+-if the number of edges are few then we should use adjacency list
+
+
